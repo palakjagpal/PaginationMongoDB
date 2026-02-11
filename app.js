@@ -14,6 +14,10 @@ connectDB()
 
 app.use("/api/users",myRoutes)
 
+app.get("/", (req, res) => {
+    res.send("Pagination API is running...")
+})
+
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
